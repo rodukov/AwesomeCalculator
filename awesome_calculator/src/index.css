@@ -1,0 +1,12 @@
+
+:root {
+    --primary-background-color: rgb(77, 0, 221);
+    --button-color: rgb(77, 0, 221);
+    --default-font-color: rgb(77, 0, 221);
+}
+html { margin: 0; padding: 0; height: 100px;
+    background: linear-gradient(119deg, rgb(77, 0, 221), rgb(0, 132, 255) );
+    background-repeat: no-repeat; min-height: 100%; }
+.basic { text-align: center; margin: 0; }
+
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
