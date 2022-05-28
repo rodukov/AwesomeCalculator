@@ -15,6 +15,10 @@ function App() {
   function clear(e) {
     setResult('')
   }
+  function delete_symbol(e) {
+    result = result.toString()
+    setResult(result.replace(result.slice(-1), ""))
+  }
   function solve(e) {
     if(e.target.innerText === '=') { setResult(eval(result)) }
   }
@@ -24,12 +28,15 @@ function App() {
       <div className='calculator'>
       <div className='does'>
           <div className='do-container'><p className='do do1' onClick={clear}>AC</p></div>
+          <div className='do-container'><p className='do do8' onClick={delete_symbol}>←</p></div>
           <div className='do-container'><p className='do do2' onClick={button}>÷</p></div>
           <div className='do-container'><p className='do do3' onClick={button}>×</p></div>
           <div className='do-container'><p className='do do4' onClick={button}>+</p></div>
           <div className='do-container'><p className='do do5' onClick={button}>−</p></div>
+          <div className='do-container'><p className='do do6' onClick={button}>(</p></div>
+          <div className='do-container'><p className='do do7' onClick={button}>)</p></div>
         </div>
-        <div><p className='basic'><input className='result' value={result} id="result" placeholder="😉 Awesome? "></input></p></div>
+        <div><p className='basic'><input className='result' value={result} id="result" placeholder="😉 Awesome?"></input></p></div>
         <div className='numbers'>
           <div className='number-container'><p className='number' onClick={button}>1</p></div>
           <div className='number-container'><p className='number' onClick={button}>2</p></div>
